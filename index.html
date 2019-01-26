@@ -1,0 +1,31 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $.post("http://localhost:8080",
+    {
+      from: $("#from").val(),
+	  to: $("#to").val(),
+	  amount: $("#amount").val()
+    },
+    function(data,status){
+      $("#result").html("Data: " + data + "\nStatus: " + status);
+    },
+	"json");
+  });
+});
+</script>
+</head>
+<body>
+	<h1>Send POST to nodejs server</h1>
+	<form action="http://localhost:8080/transaction" method="POST">
+		<input id="from" type="text" value="from" name="from"/>
+		<input id="to" type="text" value="to" name="to"/>
+		<input id="amount" type="text" value="10" name="amount"/>
+		<button type="submit">Send</button>
+	</form>
+	<div id="result"></div>
+</body>
+</html>
