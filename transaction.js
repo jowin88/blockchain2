@@ -8,10 +8,10 @@ exports.transaction = function(this_nodes_transactions, new_txion)
 	this_nodes_transactions.push(new_txion);
 	// Because the transaction was successfully
 	// submitted, we log it to our console
-	console.log("\nNew transaction");
-	console.log("\nFROM: "+new_txion.from);
-	console.log("\nTO: "+new_txion.to);
-	console.log("\nAMOUNT: "+new_txion.amount);
+	//console.log("\nNew transaction");
+	//console.log("\nFROM: "+new_txion.from);
+	//console.log("\nTO: "+new_txion.to);
+	//console.log("\nAMOUNT: "+new_txion.amount);
 	// Then we let the client know it worked out
 	txt = "Transaction submission successful\n";
 	console.log(this_nodes_transactions);
