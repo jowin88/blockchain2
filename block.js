@@ -9,13 +9,13 @@ exports.block = class Block {
   }
 
   hash_block() {
-	this.sha = sha256.create();
-	this.sha.update(
+	var sha = sha256.create();
+	sha.update(
 		String(this.index)
 		+String(this.timestamp)
 		+String(this.data)
 		+String(this.previous_hash)
 	);
-	return this.sha.hex();
+	return sha.hex();
   }
 };

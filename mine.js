@@ -1,6 +1,6 @@
 var block = require("./block").block;
 var proof_of_work = require("./proof_of_work").proof_of_work;
-exports.mine = function(blockchain, this_nodes_transactions, miner_address, request)
+exports.mine = function(blockchain, this_nodes_transactions, miner_address)
 {
 		// Get the last proof of work
 		last_block = blockchain[blockchain.length - 1];

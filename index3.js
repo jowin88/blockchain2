@@ -9,7 +9,7 @@ var miner_address = "q3nf394hjg-random-miner-address-34nf3i4nflkn3oi";
 // so that we can communicate
 // with them
 peer_nodes = ["http://localhost:8080","http://localhost:8081","http://localhost:8082"];
-current_node = "http://localhost:8080";
+current_node = "http://localhost:8082";
 // A variable to deciding if we're mining or not
 mining = true;
 // to get the latest blockhain from decentralized server
@@ -114,4 +114,4 @@ http.createServer(function (req, res) {
 	else{result="No result";}
 	res.write(result); //write a response to the client
 	res.end(); //end the response
-}).listen(8080); //the server object listens on port 8080
+}).listen(8082); //the server object listens on port 8080
